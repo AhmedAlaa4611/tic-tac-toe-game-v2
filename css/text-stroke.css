@@ -1,0 +1,39 @@
+.text-stroke {
+    width: fit-content;
+    margin: 0 auto;
+
+    -webkit-text-stroke: 1px #58c7fa;
+    color: transparent;
+
+    font-size: 4rem;
+    position: relative;
+}
+
+.text-stroke::before {
+    content: attr(data-p-content);
+    position: absolute;
+
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+
+    color: #58c7fa;
+    border-right: 2px solid #58c7fa;
+
+    animation: animate-x 2s linear infinite;
+}
+
+@keyframes animate-x {
+    from, to {
+        width: 0;
+    }
+    70%, 99% {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-stroke {
+        font-size: 2rem;
+    }
+}
