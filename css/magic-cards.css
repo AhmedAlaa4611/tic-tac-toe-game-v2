@@ -12,7 +12,7 @@
 body {
     height: 100vh;
     background: var(--bg-color);
-    padding: 3rem;
+    margin: 3rem 0;
 }
 
 .cards-container {
